@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bharat-pressfab.netlify.app/sitemap.xml
