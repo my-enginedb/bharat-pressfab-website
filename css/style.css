@@ -622,7 +622,7 @@ h4 { font-size: 1.125rem; line-height: 1.3; letter-spacing: -0.01em; }
 .back-to-top {
   position: fixed;
   bottom: 24px;
-  right: 92px;
+  right: 96px;
   z-index: 90;
   width: 44px;
   height: 44px;
@@ -865,7 +865,7 @@ h4 { font-size: 1.125rem; line-height: 1.3; letter-spacing: -0.01em; }
 
 /* Dark mode toggle button */
 .dark-mode-toggle {
-  position: fixed; bottom: 100px; right: 24px; z-index: 90;
+  position: fixed; bottom: 160px; right: 24px; z-index: 90;
   width: 44px; height: 44px; border-radius: 50%;
   background: var(--color-ink-900); color: var(--color-white);
   border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
@@ -1018,8 +1018,9 @@ h4 { font-size: 1.125rem; line-height: 1.3; letter-spacing: -0.01em; }
 
 /* Back to top position adjustment */
 @media (max-width: 768px) {
-  .dark-mode-toggle { bottom: 90px; right: 16px; }
+  .dark-mode-toggle { bottom: 136px; right: 16px; }
   .wa-widget { bottom: 16px; right: 16px; }
+  .back-to-top { right: 80px; }
   .wa-greeting { width: 180px; }
 }
 
@@ -1111,7 +1112,7 @@ h4 { font-size: 1.125rem; line-height: 1.3; letter-spacing: -0.01em; }
 
 /* Language toggle */
 .lang-toggle {
-  position: fixed; bottom: 156px; right: 24px; z-index: 90;
+  position: fixed; bottom: 216px; right: 24px; z-index: 90;
   width: 44px; height: 44px; border-radius: 50%;
   background: var(--color-steel-100); color: var(--color-ink-700);
   border: 1px solid var(--color-steel-200);
@@ -1121,7 +1122,7 @@ h4 { font-size: 1.125rem; line-height: 1.3; letter-spacing: -0.01em; }
   font-weight: 700; font-size: 0.75rem;
 }
 .lang-toggle:hover { transform: scale(1.1); background: var(--color-accent-50); }
-@media (max-width: 768px) { .lang-toggle { bottom: 148px; right: 16px; } }
+@media (max-width: 768px) { .lang-toggle { bottom: 192px; right: 16px; } }
 
 /* Case studies page */
 .case-study-card {
@@ -1193,7 +1194,7 @@ h4 { font-size: 1.125rem; line-height: 1.3; letter-spacing: -0.01em; }
 
 /* Request callback button */
 .fab-callback {
-  position: fixed; bottom: 24px; right: 92px; z-index: 90;
+  position: fixed; bottom: 92px; right: 24px; z-index: 90;
   width: 56px; height: 56px; border-radius: 50%;
   background: var(--color-ink-900); color: #fff;
   display: flex; align-items: center; justify-content: center;
@@ -1210,7 +1211,7 @@ h4 { font-size: 1.125rem; line-height: 1.3; letter-spacing: -0.01em; }
 }
 .fab-callback:hover .fab-callback-tooltip { opacity: 1; transform: translateY(0); }
 @media (max-width: 768px) {
-  .fab-callback { bottom: 16px; right: 80px; width: 48px; height: 48px; }
+  .fab-callback { bottom: 76px; right: 16px; width: 48px; height: 48px; }
 }
 
 /* Brochure download gate */
