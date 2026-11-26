@@ -1257,9 +1257,27 @@ h4 { font-size: 1.125rem; line-height: 1.3; letter-spacing: -0.01em; }
 
 /* Team photo */
 .team-photo {
-  width: 100%; border-radius: var(--radius-card);
-  box-shadow: var(--card-shadow);
+  width: 100%; max-width: 720px; border-radius: var(--radius-card);
+  box-shadow: var(--card-shadow); cursor: zoom-in; display: block; margin: 0 auto;
 }
+
+/* Awards */
+.awards-showcase {
+  width: 100%; max-width: 960px; border-radius: var(--radius-card);
+  box-shadow: var(--card-shadow); display: block; margin: 0 auto;
+}
+.awards-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+}
+@media (min-width: 640px) { .awards-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1024px) { .awards-grid { grid-template-columns: repeat(5, 1fr); } }
+.awards-grid img {
+  width: 100%; border-radius: var(--radius-card); box-shadow: var(--card-shadow);
+  cursor: zoom-in; aspect-ratio: 1/1; object-fit: contain;
+  background: var(--color-steel-50); padding: 8px;
+  transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1), box-shadow 0.3s;
+}
+.awards-grid img:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
 
 /* Plants grid */
 .plants-grid {

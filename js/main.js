@@ -162,6 +162,38 @@ if (backToTop) {
     });
   });
 
+  // Awards grid images
+  document.querySelectorAll('.awards-grid img').forEach(function(img) {
+    img.addEventListener('click', function() {
+      var grid = img.closest('.awards-grid');
+      var imgs = grid.querySelectorAll('img');
+      var idx = Array.prototype.indexOf.call(imgs, img);
+      openLightbox(grid, idx);
+    });
+  });
+
+  // Awards showcase (single image)
+  var showcase = document.querySelector('.awards-showcase');
+  if (showcase) {
+    showcase.style.cursor = 'zoom-in';
+    showcase.addEventListener('click', function() {
+      images = [showcase.src];
+      showImage(0);
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  }
+
+  // Team photo (single image, click to enlarge)
+  document.querySelectorAll('.team-photo').forEach(function(img) {
+    img.addEventListener('click', function() {
+      images = [img.src];
+      showImage(0);
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
   // Infrastructure card images
   document.querySelectorAll('.infra-card img').forEach(function(img) {
     img.style.cursor = 'zoom-in';
