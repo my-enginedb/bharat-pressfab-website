@@ -1072,7 +1072,14 @@ h4 { font-size: 1.125rem; line-height: 1.3; letter-spacing: -0.01em; }
 }
 
 /* Product comparison table */
-.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; position: relative; }
+@media (max-width: 767px) {
+  .table-wrap::after {
+    content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 32px;
+    background: linear-gradient(to right, transparent, rgba(245,247,250,0.9));
+    pointer-events: none; z-index: 1;
+  }
+}
 .compare-table {
   width: 100%; border-collapse: collapse; min-width: 700px;
   background: var(--color-white); border-radius: var(--radius-card); overflow: hidden;
